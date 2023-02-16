@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Julee&family=Lato:wght@700&family=Poppins&display=swap');
+
+
+/* font-family: 'Lato', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+.navbar{
+    background: transparent !important;
+    animation: navbar-loading 500ms cubic-bezier(0.4, 0, 0.81, 1.47) forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes navbar-loading{
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.nav-link{
+    font-weight: 600;
+}
+
+.header{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 10000000;
+    background:linear-gradient(rgba(0,0,0,.4) 50%,rgba(0,0,0,.4) 50%),
+                url('../img/blue-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Poppins', sans-serif;
+    clip-path: polygon(0 0 , 0 75% ,50% 100%, 100% 75% , 100% 0%);
+}
+
+.container-below-navbar h2{
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 2px;    
+    font-family: 'Julee', cursive;
+    text-shadow: 0px 1px 2px black;
+
+    /* css properties for moving animation */
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    animation: moving-text-heading 2s  ease-in forwards;
+}
+
+@keyframes moving-text-heading {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 25ch;
+    }
+}
+
+
+.container-below-navbar p{
+    text-align: left;
+    
+    font-size: 24px;
+    word-spacing: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1.5px;
+
+
+    /* css properties for moving animation */   
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(0, 0, 0, 0.191);
+    animation: moving-text-p 10s  ease-in-out forwards infinite;
+    animation-delay: 2s;
+    animation-timing-function: steps(50);
+    /* animation-timing-function: step-end(1,end); */
+}
+
+@keyframes moving-text-p {
+    0%,100%{
+        width: 0ch;
+    }
+    50%{
+        width: 45ch;
+    }
+}
+
+/* ******************* header section is completed****************** */
+
+
+/* ******************** skills section is start ****************** */
+.skills{
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+    background-color: rgb(227, 224, 224);
+}
+
+
+/* ******************** skills section is end ****************** */

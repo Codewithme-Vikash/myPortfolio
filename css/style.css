@@ -40,11 +40,7 @@ h2{
 }
 
 
-@media screen and (max-width:992px) {
-    h2{
-        font-size: 1.4rem;
-    }
-}
+
 
 
 
@@ -98,12 +94,6 @@ h2{
     animation: moving-text-heading 2s  ease-in forwards;
 }
 
-@media screen and ( 0 <width <= 768px) {
-    .container-below-navbar h2{
-        font-size: 2em;
-        margin: 0;
-    }
-}
 
 @keyframes moving-text-heading {
     0%{
@@ -143,6 +133,7 @@ h2{
         width: 45ch;
     }
 }
+
 
 /* ******************* header section is completed****************** */
 
@@ -414,13 +405,79 @@ footer .icons{
     color: black;
     transition: .3s;
 }
-/* 
-footer .icons:not(:hover){
-    opacity: .5;
-} */
+
 
 footer .icons:hover{
     transform: scale(1.3) translate(2px);
 
 }
 /* ************************footer section is end ******************************** */
+
+
+@media screen and ( 0 < width <= 576px) {
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    .container-below-navbar h2{
+        margin: 0;
+        width: max-content;
+        font-size: 1.7rem;
+        letter-spacing: .5px;    
+        text-shadow: 0px 1px 2px black;
+        white-space: normal;
+        /* css properties for not moving animation */
+        animation: none;
+    }
+
+
+
+
+    .container-below-navbar p{
+        font-size: 1.2rem;
+        
+        text-align: left;
+        
+        border: none;
+        /* for wrap the text at overflow condition */
+        white-space: normal;  
+        /* css properties for not moving animation */   
+        width: auto;
+        animation: none;
+    }
+
+    .header{
+        min-height: fit-content;
+    }
+
+    section{
+        min-height: fit-content;
+    }
+
+    .footer{
+        min-height: fit-content;
+    }
+
+    
+}
+
+/* medium(576-767) and large(768-991) screens  */
+@media screen and ( 576px < width <= 992px) {
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .header{
+        min-height: fit-content;
+    }
+
+    section{
+        min-height: min-content;
+        /* background-color: red; */
+    }
+
+    .footer{
+        min-height: fit-content;
+    }
+}
